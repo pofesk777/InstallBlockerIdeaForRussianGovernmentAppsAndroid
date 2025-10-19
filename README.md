@@ -3,6 +3,7 @@
 
 Можно создать приложение для Android, которое просто не даст установить Маx, Rustore, ГосУслуги, создавая конфликт разрешений и провайдеров при установке. Для этого нужно лишь добавить в манифест вашего приложения:
 
+```xml
 <permission
         android:name="ru.rostel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature"/>
@@ -118,6 +119,7 @@ android:name=".FakeProvider18"
             android:enabled="false"
             android:exported="false"
    android:authorities="ru.rostel.AGCInitializeProvider"/>
+   ```
 
 Это можно добавить в абсолютно любое приложение и это не будет мешать его функционалу. Но если Max, Rustore, или ГосУслуги уже установлены, то уже ваше приложение нельзя будет установить. Тут важно, кто установлен первым.
 
